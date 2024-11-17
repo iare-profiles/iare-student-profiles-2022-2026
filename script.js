@@ -1,4 +1,16 @@
 document.getElementById("loadProfile").addEventListener("click", function () {
+    loadProfile();
+});
+
+// Listen for the 'Enter' key press on the roll number input
+document.getElementById("rollNumber").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();  // Prevent the default action (form submission)
+        loadProfile();  // Trigger the load profile function
+    }
+});
+
+function loadProfile() {
     let rollNumber = document.getElementById("rollNumber").value.trim();
 
     if (!rollNumber) {
@@ -69,4 +81,4 @@ document.getElementById("loadProfile").addEventListener("click", function () {
             document.getElementById(targetId).classList.add("active-section");
         });
     });
-});
+}
