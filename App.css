@@ -1,0 +1,147 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(135deg, #FF7EB3, #FF758C, #6C5CE7, #74B9FF, #55EFC4);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+  }
+  
+  /* Animate the background gradient */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo-container img {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 5px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    padding: 8px 15px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  nav a:hover {
+    background-color: #FFD700;
+    transform: scale(1.1);
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #666;
+    transform: scale(1.1);
+  }
+  
+  #error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  #content {
+    text-align: center;
+  }
+  
+  section {
+    display: none;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  section img {
+    max-width: 90%;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .active-section {
+    display: block;
+  }
+  
