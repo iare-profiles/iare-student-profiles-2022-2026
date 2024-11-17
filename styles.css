@@ -44,7 +44,7 @@ nav {
     margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Ensure links are centered */
+    justify-content: center;
 }
 
 nav a {
@@ -87,8 +87,8 @@ label {
 
 input[type="text"] {
     padding: 10px;
-    width: 100%; /* Make the input take up the full width of its container */
-    max-width: 300px; /* Limit the max width */
+    width: 100%;
+    max-width: 300px;
     font-size: 16px;
     margin: 10px 0;
     border-radius: 5px;
@@ -137,20 +137,40 @@ section img {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    /* Stack navbar items vertically with sufficient space */
+    /* Style for sidebar navigation */
     nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 220px;
+        background-color: rgba(0, 0, 0, 0.9);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
+        align-items: flex-start;
+        padding-top: 20px;
+        z-index: 2000;
     }
 
     nav a {
-        margin: 10px 0; /* More space between links */
-        font-size: 18px; /* Increase font size for better readability */
-        padding: 12px 20px; /* Add more padding for touch targets */
-        width: 100%; /* Make each link fill the width of the container */
-        text-align: center;
+        margin: 10px 0; /* Space between each link */
+        font-size: 18px; /* Adjust font size for mobile */
+        width: 100%; /* Make links take the full width */
+        text-align: left; /* Align text to the left */
+        padding: 12px 20px; /* Add more padding for ease of clicking */
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background-color: #FFD700;
+        transform: none; /* Remove scale effect for better consistency */
+    }
+
+    /* Main content should shift to the right when the sidebar is active */
+    main {
+        margin-left: 220px; /* Leave space for the sidebar */
+        padding-left: 20px;
     }
 
     /* Ensure the input and button elements are fully responsive */
@@ -172,7 +192,7 @@ section img {
     /* Adjust the profile sections */
     section {
         width: 90%;
-        margin: 0 auto; /* Center the sections */
+        margin: 0 auto;
     }
 
     /* Adjust image sizes for mobile */
