@@ -84,7 +84,8 @@ label {
 
 input[type="text"] {
     padding: 10px;
-    width: 300px;
+    width: 100%; /* Make the input take up the full width of its container */
+    max-width: 300px; /* Limit the max width */
     font-size: 16px;
     margin: 10px 0;
     border-radius: 5px;
@@ -129,4 +130,47 @@ section img {
 
 .active-section {
     display: block; /* Only the active section is visible */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Stack navbar items vertically */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0; /* Space them out vertically */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    /* Ensure the input and button elements are fully responsive */
+    .input-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 90%; /* Allow the input to take up most of the available width */
+        max-width: 100%;
+    }
+
+    button {
+        width: 90%; /* Make the button take up most of the width as well */
+        max-width: 300px;
+    }
+
+    /* Adjust the profile sections */
+    section {
+        width: 90%;
+        margin: 0 auto; /* Center the sections */
+    }
+
+    /* Adjust image sizes for mobile */
+    section img {
+        max-width: 100%;
+        height: auto;
+    }
 }
